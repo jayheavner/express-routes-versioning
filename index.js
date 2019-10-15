@@ -109,6 +109,9 @@ function getVersion(req) {
       if (req.headers && req.headers['accept-version']) {
          version = req.headers['accept-version'];
       }
+      else if (req.headers && req.headers['ctaapi-version']) {
+         version = req.headers['ctaapi-version'];
+      }
    } else {
       version = String(req.version);
    }
